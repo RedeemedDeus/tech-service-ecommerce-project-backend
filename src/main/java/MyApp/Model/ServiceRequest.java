@@ -3,6 +3,8 @@ package MyApp.Model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -13,7 +15,12 @@ public class ServiceRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String serviceType;
-    private RequestDetails requestDetails;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name="workoutFK")
+    private List<RequestDetails> requestDetails;
 //    private Account customerAccount;
 }
