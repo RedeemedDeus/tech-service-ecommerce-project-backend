@@ -1,2 +1,4 @@
-package MyApp.Model;public class RequestDetails {
+package MyApp.Model;
+
+public class RequestDetails {
 }

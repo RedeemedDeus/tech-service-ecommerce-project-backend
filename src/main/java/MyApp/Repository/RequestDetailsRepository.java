@@ -1,2 +1,4 @@
-package MyApp.Repository;public interface RequestDetailsRepository {
+package MyApp.Repository;
+
+public interface RequestDetailsRepository {
 }
