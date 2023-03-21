@@ -1,4 +1,4 @@
-package Repository;
+package MyApp.Repository;
 
 public interface RequestDetailsRepository {
 }

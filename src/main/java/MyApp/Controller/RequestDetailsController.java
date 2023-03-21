@@ -1,4 +1,4 @@
-package Controller;
+package MyApp.Controller;
 
 public class RequestDetailsController {
 }

@@ -1,4 +1,4 @@
-package Model;
+package MyApp.Model;
 
 public class ServiceRequest {
 }
