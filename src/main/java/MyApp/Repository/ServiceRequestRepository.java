@@ -1,4 +1,7 @@
 package MyApp.Repository;
 
-public interface ServiceRequestRepository {
+import MyApp.Model.ServiceRequest;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ServiceRequestRepository extends JpaRepository<ServiceRequest, Long> {
 }
