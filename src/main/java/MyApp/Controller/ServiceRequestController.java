@@ -35,6 +35,7 @@ public class ServiceRequestController {
         return serviceRequestService.getAllRequests();
     }
 
+
     /**
      * 3.As a company worker I should be able to see any unfulfilled service requests
      * GET localhost:9000/request?fulfilled={true/false}
@@ -61,6 +62,7 @@ public class ServiceRequestController {
     public ServiceRequest changeRequestStatus(@RequestBody ServiceRequest request, @PathVariable long id) {
         return serviceRequestService.changeRequestStatus(id,request);
     }
+
 
 
 }
