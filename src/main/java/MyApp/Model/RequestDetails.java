@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 /**
- * RequestDetail -
+ * RequestDetail - like a receipt of what a customer requested
  * customerName - who's making the request
  * comment - a message from the customer (optional)
  * hours - how long the service will take
@@ -39,9 +39,10 @@ public class RequestDetails {
     /**
      * Many to One - each service can have multiple requests
      */
-    @ManyToOne(fetch = FetchType.EAGER)
+    /*@ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
-    @JoinColumn(name="serviceFK")
+    @JoinColumn(name="service_id")
     private ServiceRequest serviceRequest;
+    */
 
 }
