@@ -1,10 +1,10 @@
 package MyApp.Model;
 
-//import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
-//import java.util.List;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,8 +20,8 @@ public class ServiceRequest {
     @Column
     private String serviceType;
 
-    /*@OneToMany(fetch = FetchType.EAGER)
-    //@JsonBackReference
-    //private List<RequestDetails> requestDetails;
-    private Account customerAccount;*/
+    @OneToMany(fetch = FetchType.EAGER)
+    @JsonBackReference
+    private List<RequestDetails> requestDetails;
+    //private Account customerAccount;
 }

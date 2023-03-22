@@ -28,9 +28,6 @@ public class RequestDetails {
     private String customerName;
 
     @Column
-    private String serviceType;
-
-    @Column
     private String comment;
 
     @Column
@@ -44,8 +41,8 @@ public class RequestDetails {
      */
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
-    @JoinColumn(name="accountId")
-    private Account account;
+    @JoinColumn(name="serviceFK")
+    private ServiceRequest serviceRequest;
 
 
 }

@@ -3,10 +3,7 @@ package MyApp.Controller;
 import MyApp.Model.ServiceRequest;
 import MyApp.Service.ServiceRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -35,5 +32,10 @@ public class ServiceRequestController {
     @GetMapping("request")
     public List<ServiceRequest> getAllRequests() {
         return serviceRequestService.getAllRequests();
+    }
+
+    @GetMapping("request/{id}")
+    public ServiceRequest getAllRequests(@PathVariable long id) {
+        return serviceRequestService.getRequestById(id);
     }
 }

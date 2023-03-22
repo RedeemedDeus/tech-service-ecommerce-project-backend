@@ -22,4 +22,8 @@ public class ServiceRequestService {
     public List<ServiceRequest> getAllRequests() {
         return  serviceRequestRepository.findAll();
     }
+
+    public ServiceRequest getRequestById(long id) {
+        return  serviceRequestRepository.findById(id).get();
+    }
 }
