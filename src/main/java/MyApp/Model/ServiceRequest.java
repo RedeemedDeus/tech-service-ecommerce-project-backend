@@ -20,6 +20,9 @@ public class ServiceRequest {
     @Column
     private String serviceType;
 
+    @Column
+    private boolean fulfilled = false;
+
     @OneToMany(fetch = FetchType.EAGER)
     @JsonBackReference
     private List<RequestDetails> requestDetails;
