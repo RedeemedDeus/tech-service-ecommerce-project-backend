@@ -19,6 +19,9 @@ public class ServiceRequest {
     @Column
     private String serviceType;
 
+    @Column
+    private boolean fulfilled = false;
+
     @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name="workoutFK")
     private List<RequestDetails> requestDetails;
