@@ -28,6 +28,9 @@ public class RequestDetails {
     private String customerName;
 
     @Column
+    private String serviceType;
+
+    @Column
     private String comment;
 
     @Column
@@ -37,12 +40,12 @@ public class RequestDetails {
     private double totalPrice;
 
     /**
-     * Many to One - each service can have multiple requests
+     * Many to One - each account can have multiple requests
      */
-    /*@ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
-    @JoinColumn(name="service_id")
-    private ServiceRequest serviceRequest;
-    */
+    @JoinColumn(name="accountId")
+    private Account account;
+
 
 }
