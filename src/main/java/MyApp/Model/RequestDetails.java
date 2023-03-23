@@ -41,7 +41,7 @@ public class RequestDetails {
      */
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
-    @JoinColumn(name="serviceFK")
+    @JoinColumn(name="requestFK")
     private ServiceRequest serviceRequest;
 
 }

@@ -27,16 +27,9 @@ public class Account {
     @Column
     private String username;
 
-    @Column
-    private String password;
-
-    //@Column
-    //private String email;
-
-    /**
-     * One to Many - Each customer can have multiple requests
-     */
-    @OneToMany(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
-    private List<RequestDetails> requestDetails;
+    @JoinColumn(name="requestFK")
+    private ServiceRequest serviceRequest;
+
 }
