@@ -1,6 +1,8 @@
 package MyApp.Model;
 
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,4 +32,5 @@ public class ServiceRequest {
     @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name="requestFK")
     private List<Account> accounts;
+
 }

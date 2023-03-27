@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 /**
- * RequestDetail -
+ * RequestDetail - like a receipt of what a customer requested
  * customerName - who's making the request
  * comment - a message from the customer (optional)
  * hours - how long the service will take
@@ -37,11 +37,12 @@ public class RequestDetails {
     private double totalPrice;
 
     /**
-     * Many to One - each service can have multiple requests
+     * Many to One - each account can have multiple requests
      */
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
     @JoinColumn(name="requestFK")
     private ServiceRequest serviceRequest;
+
 
 }

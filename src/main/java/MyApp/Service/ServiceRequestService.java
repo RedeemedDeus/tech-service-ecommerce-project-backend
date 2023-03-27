@@ -25,6 +25,7 @@ public class ServiceRequestService {
         return  serviceRequestRepository.findAll();
     }
 
+
     public List<ServiceRequest> getAllRequestsFulfilled(boolean fulfilled) {
         return serviceRequestRepository.getRequestsByFulfilled(fulfilled);
     }
@@ -40,5 +41,6 @@ public class ServiceRequestService {
         request1.setFulfilled(request.isFulfilled());
         serviceRequestRepository.save(request1);
         return request1;
+
     }
 }
