@@ -23,20 +23,16 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column
     private String username;
-
-    @Column
     private String password;
 
-    //@Column
-    //private String email;
+    private boolean isEngineer;
 
-    /**
-     * One to Many - Each customer can have multiple requests
-     */
-    @OneToMany(fetch = FetchType.EAGER)
+    private long secureToken;
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
-    private List<RequestDetails> requestDetails;
+    @JoinColumn(name="requestFK")
+    private ServiceRequest serviceRequest;
+
 }
